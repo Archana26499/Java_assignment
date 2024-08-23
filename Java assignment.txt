@@ -1,0 +1,646 @@
+1.What is Testing?
+Software testing is the process of assessing the functionality of a software program. 
+The process checks for errors and gaps and whether the outcome of the application matches desired expectations before the software is installed and goes live.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.What is java?
+Java is an Object Oriented Programming language that is designed to be platform-independent, 
+Its user friendly and secured. 
+Writing,compiling and debugging easy. It can reused.
+It is widely used for building web applications, mobile applications, and large-scale enterprise systems.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Java Features?
+i. Platform independent (Java complier converted source code into byte code, it can be executed in any platform).
+ii.Open source(free of cost)
+iii.Secured.
+iv. Multithread and multitaksing ( more task  and different can be completed at a time)
+v.protable.(write once runs anywhere)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Java architecture?
+It is a collection of components. Java architecture explains each and every step of how the program is complied and executed.
+There are 3 main components.
+*JDK: Java Development Kit.
+Its Develope the Java code, jdk has to be install. it is development fit.Standard version 1.8
+*JRE: Java Runtime Environment
+It helps to run the program.
+it contains predefined library.
+*JVM - Java Virtal Machine
+It is allocates the memory.
+Phscillay not exists.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Types of coding standard and where to be used?
+There are two types of coding standard we used in java language.
+1 Pascal
+2 Camel
+*Pascal 
+Everyword firstletter must be in capital,
+It is used in project name and class name.
+_______________________
+|Ex:Student or Student_Details|
+|___PASCAL____________|
+*Camel 
+Except first word remaining words of first letter must be in capital.
+It is used in method,variable and object.
+______________________________
+|Ex: nameStudent or nameStudentDetails|
+|_____CAMEL__________________|
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.Define datatypes? and its types? example program?
+
+Datatypes is used to specify the types of the data.
+There is 2 type of datatype.
+i.Primitive datatype
+ii.Non-Primitive datatype.
+PRIMITIVE DATATYPE:
+Primitive datatypes are predefined by the language and named by a keyword. It stores only one value.
+In java provide 8 types of primitive datatype.
+Byte,short,int,long,float,souble,character,boolean
+EX: 
+       NUMERIC DATATYPES
+       byte a = 100;
+       short b = 109;
+       int c = 1000;
+       long d = 12000;
+      FLOATING POINTS DATATYPES
+      float e = 20.0f;
+      double f = 70.00;
+     NON-NUMERIC DATATYPES
+      char g = 'r'; OR '4'
+      boolean = trule/false;
+
+
+NON-PRIMITIVE DATATYPE:
+Non-primitive datatypes are called reference or objects datatype. it created by the programmer. 
+using this types of datatype user can stored multiple values.
+Ex: 
+Array,Array-List,String.
+
+Array [] a ={1,2,3,4,5,6,7};
+String str = "Welcome to java learning";
+List<Integer> mylist = new ArrayList<Integer>();
+    mylist.add(12);
+    mylist.add(1);
+    mylist.add(12);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7.Difference between primitive datatype and nonprimitive datatype.
+Primitive datatypes are predefined by the language and named by a keyword. It stores only one value. Default value for integer is 0 and for boolean is false
+Non-primitive datatypes are called reference or objects datatype. it created by the programmer. 
+using a particular (ex; int,string) datatype user can stored multiple values.Default value is null.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8.Oop structure?
+OOP Stucture refers method of implementation in our program are organized in the form of class,object and methods
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9.Define object?
+Object is an instance of a class and it is helps to call a method.
+It allocates memory. "New " keyword is used for creation. 
+Object created only in main method. object will be created by using class.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10. Types of OOPS concept?
+i.Encapsulation.
+ii.Inheritance
+iii.Abstraction
+iv Polymorphism.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11. What is encapsulation?
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit.
+Code: class, method, variable and object.
+Data: given data.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.what is inheritance and its types?
+Aquiring all the variables and methods form one class to another class is called inheritance.
+One class access the properties of another class by using "extends" keyword.
+There are 4 types of inheritance.
+i. Single Inheritance.
+ii.Multilevel Inheritance.
+iii.Hierarchy Inheritance.
+iv.Multiple Inheritance.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.Define multilevel inheritance? and sample program?
+One parent class will be accessed by one child class,that child class will be accessed by Another grand child class.
+
+|******|                             |*******|                              |*******|
+|    A    |   ===========>  |     B     |  ============>  |    C      |
+*******        extends         ********        extends           ********
+
+Parent class                       Child class                            Grand child class
+
+Program for Multileve Inheritance:
+// We need to create the object for final child class and call all the methods.
+Package.task.com;
+class Student{
+void nameStudent()
+{
+system.out.println("The student name is Jhon");
+}
+
+}
+class Marks extends Student
+{
+void marks()
+{
+system.out.println("The total mark of the student is 470")
+}
+
+}
+class Teacher extends Marks
+{
+void teacher();
+{
+system.out.println("The teacher name is Sheela")
+
+}
+
+}
+Public Class Student_Details{
+public static void main (String[] arg){
+Teacher tobj = new Teacher();
+tobj.nameStudent();
+tobj.marks();
+tobj.teacher();
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.Define hierarchical inheritance? and sample program?
+One parent class will be accessed by more than one child class.
+
+                  Parent Class
+                    |******|
+                    |    A    |
+                    *******
+                 /         |            \
+               /           |             \
+      |*****|       |*****|      |*****|
+      |    B  |       |    C   |     |   D   |
+      ******       ******     ******
+   Child class    Child class Child class
+       B                 C             D
+Program:
+package org.test2;
+//Hierarchy inheritance. We need to create object for every child class and call all the method.
+class Student_Details{
+void name()
+{
+System.out.println("The student name is jhon");
+}
+}r
+class Parent extends Student_Details
+{
+void parent(){
+System.out.println("The Jhon Parent name is Mr.Ben and Mrs. Christy Ben");
+}
+}
+class Teacher extends Student_Details
+{
+void teacherName()
+{
+System.out.println("Jhon Teacher name is Maartha");
+}
+}
+public class Assignment{
+public static void main (String [] agrs)
+{
+Parent sobj = new Parent();
+sobj.parent();
+sobj.name();
+Teacher tobj = new Teacher();
+tobj.name();
+tobj.teacherName();
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.Define polymorphism? explain about method overloading? sample program?
+One thing can have many forms. We can achieve polymorphism using methodoverloading,
+Methodoverloading:
+We can create multiple number of methods with same name within same class.
+4 rules should be followed:
+i. method name should be same.
+ii.number of parameter should be different.
+iii.number of datatypes of parameter should be different.
+iv.order of parameter should be different.
+Program:
+package org.test2;
+class Tamil{	
+//same method name as mark and following 4 rules.	
+void mark (String name, int m1 )
+{
+System.out.println("The student name is  and mark is :" + name + " "+ m1);
+}
+void mark(int total)
+{
+System.out.println("Total mark is :" + total);
+}
+void mark(String st)
+{
+System.out.println("Subject name is : " + st);
+}
+void mark(boolean b, int m1 )
+{ 
+System.out.println(" Result of the sutent is :" + m1+ "  " + b);
+}
+}
+public class Assignment
+{
+public static void main(String[] arg)
+{
+//need to create object for the class and call all the methods and pass corresponding values for that.
+Tamil st = new Tamil();
+st.mark("kavin", 70);
+st.mark(4000);
+st.mark("Math");  
+st.mark(true, 70);
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16.Explain about method overriding? and sample program?
+Method overriding means class name different,but method and argument name will be same.
+It is also known as run time polymorphism or dynamic binding. Method overriding should only possible in inheritance. because it having atleast 2 class.
+Rules:
+iShould not change the declaration part.(method name and parameter should be same)
+ii.Should be change only the implementation part.
+Program:
+package com.task;
+Method overriding
+class Student{
+void age(int a) {
+System.out.println(a);
+}
+void mark (double m1, double m2) {
+}
+}
+class Grade extends Student{
+void mark(double m1, double m2) 
+{
+super.mark(m1, m2);
+System.out.println(m1+m2);
+}
+}
+public class OverRide {
+public static void main(String[] args) {
+Grade gobj = new Grade();
+gobj.age(12);
+gobj.mark(90d,45d);
+}
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17.What is abstraction and it's types?
+Abstraction is a process of hiding the implementation details and showing the only the functionality to the user.
+2 types.
+i. Abstract class.
+ii.Interface
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18.Define abstract class? and sample program?
+Abstract class will supports both abstract and non abstract method
+We cannot create the object for abstract class,because there is no implementation part.
+By using the extend keyword to access the abstract class.
+Public abstract keyword is mandatory
+There is no implementation part only the signature part
+Program:
+package com.task;
+//Abstraction-Hiding the implementation part.
+abstract class Bollywood {
+public abstract void data();//Abstract method
+public abstract void age();//Abstract method
+}
+
+class Male_Actor extends Bollywood {
+
+@Override
+public void data() {
+ System.out.println("Collecting the details of  male actor");
+}//override the method of abstract class data
+
+@Override
+public void age() {
+System.out.println("Age is 55");
+}//override the method of abstract class age
+
+void name(String acname) {
+System.out.println("The actor name is:" + acname);
+	}//method with implementation part in class
+}
+
+class Female_Actor extends Bollywood {
+
+@Override
+public void data() {
+System.out.println("Collecting the details of female actor name");
+}//override the abstract method data
+
+@Override
+public void age() {
+System.out.println("Age is 40");
+}//override the abstract method age
+	
+void fname(String fname) {
+System.out.println("The female actor is:" + fname);
+}
+}
+public class Movie {
+	public static void main(String[] args) {
+		Male_Actor mobj = new Male_Actor();
+		mobj.data();
+		mobj.age();
+		mobj.name("Akshy kumar");
+		Female_Actor fobj = new Female_Actor();
+		fobj.data();
+		fobj.age();
+		fobj.fname("Sonakshi sinha");
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19.Define interface? and sample program?
+Interface is the blue print of the class.
+Interface support only abstract method. we cannot create the object for interface because there is no implementation part.
+By using the "implements" keyword to access the interface. Public abstract keyword is default in interface.To acheieve the multiple inheritance.
+
+Parent Class A               Parent Class B
+|*******|                         |*******|
+|    A      |                         |     B     |
+********                         ********
+         \                                   /
+     Implements                Implements                   
+           \                               /
+                    |*******|
+                    |    C      |
+                    ********
+                    Child class
+Program:
+package com.task;
+//Interface- multiple inheritance possible one child n number of parent
+interface Gens // interface Gens interface class 1
+{
+	void age_A();
+}
+
+interface Gender // Interface Gender interface class2
+{
+	void place();
+
+}
+
+public class Female implements Gens, Gender
+//child class Female implementing interface Gens and Gender
+{
+	void company() {
+		System.out.println("Company name cts");
+	}
+
+	@Override
+	public void age_A() {
+		System.out.println("The age is 60");
+
+	}
+
+	@Override
+	public void place() {
+		System.out.println("Place is Coimbatore ");
+
+	}
+
+	public static void main(String[] args) {
+
+		Female fob = new Female();
+		fob.company();
+		fob.age_A();
+		fob.place();
+
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20.What is Wrapper class?
+A wrapper is a special class that stores a primitive internally. But because it's a class, you can create instances of it. They store the primitive values internally, but are still real objects.
+Wrapper class names are very similar to (or exactly the same as) the names of their corresponding primitives. So, they are easy to remember.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+21.What is constructor and sample program?
+Class name and constructor name will be same
+when we create an object for a class the default constructor will be executed automatically
+It will not have any return type void
+It will support method overloading and doesn't support overriding.
+Program:
+public class ConstructorOverloading {
+    // Constructor with no parameters
+    public ConstructorOverloading() {
+        System.out.println("Default constructor called");
+    }
+
+    // Constructor with one integer parameter
+    public ConstructorOverloading(int num) {
+        System.out.println("Constructor with one parameter: " + num);
+    }
+
+    // Constructor with two parameters
+    public ConstructorOverloading(int num1, int num2) {
+        System.out.println("Constructor with two parameters: " + num1 + " and " + num2);
+    }
+
+    public static void main(String[] args) {
+        // Creating objects using different constructors
+        ConstructorOverloading obj1 = new ConstructorOverloading();
+        ConstructorOverloading obj2 = new ConstructorOverloading(10);
+        ConstructorOverloading obj3 = new ConstructorOverloading(20, 30);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+22.What is constructor chaining techniques?
+Constructor chaining technique is calling one constructor from within the another constructor by using "this" keyword.
+"this" keyword is current class object reference.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+23.What is scanner class and sample program?
+Scanner is class,It will present java.util.package.
+It is used to get input from the user at the runtime.
+Program:
+package com.task;
+//scanner - used to get the input from the user.
+import java.util.Scanner;
+public class Login_Scanner {
+
+	public static void main(String[] args) {
+		Scanner lob = new Scanner(System.in);
+
+		System.out.println("What is the portal name?");
+		String name = lob.next();
+		System.out.println("Th name of the portal "+name);
+
+		System.out.println("how many times you logged in?");
+		int logged = lob.nextInt();
+		System.out.println(" Total number of logged in:"+logged);
+
+		System.out.println("The total cost for using browser?");
+		double charge = lob.nextDouble();
+		System.out.println("Charge for using network:"+charge);
+
+		System.out.println("Enter the boolean value");
+		boolean statement = lob.nextBoolean();
+		System.out.println("The boolean value is: "+statement);
+
+		System.out.println("How many memory it will occupy?");
+		short usage = lob.nextShort();
+		System.out.println("Usage of memory"+usage);
+		lob.close();
+}
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+24.Write the variable types and sample program?
+There are 3 types of variables is available.
+i  class variable
+ii Local variable
+iii Static variable
+Program:
+ package com.task;
+//Type of variable class, static, local
+public class Breif_Variable {
+	// class variable
+	int a; // variable declaration
+	short g = 123; // variable initialization
+	boolean r;
+	double t = 67.09;
+	// static variable
+	static String name = "mainframe";
+	static int s = 456;
+	static byte k;
+	static long h = 5432;
+
+	public void book() {
+		String bookName = "data_base"; //local variable
+		System.out.println("The the book name: " + bookName);
+		int pages = 1000; // local variable
+		System.out.println("Total number of pages:" + pages);
+
+	}
+
+	public static void author() {
+		String aName = "Brooklin"; //static method 
+		System.out.println("The author name is :" + aName);
+	}
+
+	public static void main(String[] args) {
+		Breif_Variable bobj = new Breif_Variable();
+		bobj.book();
+		author();
+		System.out.println(bobj.a);
+		System.out.println(bobj.g);
+		System.out.println(bobj.r);
+		System.out.println(bobj.t);
+		System.out.println(name);
+		System.out.println(s);
+		System.out.println(k);
+		System.out.println(h);
+
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+25.Write the sample program for control statement,selection statement and logical operator?
+Program:
+package com.task;
+// Selection statement 
+//if, else if, else and logical operator
+import java.util.Scanner;
+public class Selection_statement {
+	public static void main(String[] args) {
+	Scanner sobj = new Scanner(System.in);	
+	
+	System.out.println("Enter the flight name: ");
+	String FName = sobj.nextLine();
+	System.out.println("enter the kilometer travelled: ");
+	int kiloMeter = sobj.nextInt();
+	System.out.println("Enter the price details:");
+	double price = sobj.nextDouble();
+	System.out.println("Enter the time of the flight");
+	float time = sobj.nextFloat();
+	    {
+		if (FName .equals("King"))
+		{ 
+			
+			System.out.println("the flight name is right");
+		}
+		else if (price > 1000 || kiloMeter > 10)
+		{
+			System.out.println("The flight crossed the limit and price is right");
+		}
+		else if (time <10)
+		{
+			System.out.println("That is not the correct flight");
+		}
+		else {
+			System.out.println("This is not a right flight");
+		}
+		sobj.close();
+		}
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+26.What is collection and its types?
+Collection is known as Group of object.It is an interface. It supports dissimilar data type. Collection has low memory wastage. It doesn't have any fixed length
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+27.Difference b/w List vs Set?
+**********************  *******************************
+List is an interface           |    Set is an interface          
+                                      |
+List is an index based      |     Set is value based
+                                      |
+List allow duplicate value |    Set is not allow duplicate value
+                                      |
+List follow FIFO             |    Set doesn't have any specific order
+*******************************************************
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+28.Difference b/w List vs Set Vs Map?
+***************************************************************************************
+List is an interface           |   Set is an interface                              |       Map is a key based      
+
+List is an index based       |   Set is value based                              |       Map is a key and value pair
+
+List allow duplicate value  |  Set is not allow duplicate value            |      Key+ value is a one entry
+
+List follow FIFO              |    Set doesn't have any specific order
+***************************************************************************************
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+29.What is exception and its types?
+Exception is like an error. If exception occurs program will be terminated itself
+If exception occurs we can handle it by exception handling
+Two types of exception is available.
+
+i. Checked or compile time error
+ii. Unchecked or Runtime error
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30.Difference b/w iterator vs listiterator?
+_________________________________________________________________________
+Iterator used in collection                         |             listerator used in list only
+
+It traverse in forward direction only          |             It traverse both forward and reverse direction
+___________________________________________________________________________
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
